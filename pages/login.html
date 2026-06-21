@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <script src="../js/pages/login.js" type="module"></script>
+    <title>Arborize - Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="imagem">
+            <img src="/assets/imagens/login.png" alt="imagem da tela de login">
+        </div>
+        <div class="formulario">
+            <div class="titulo">LOGIN</div>
+            <form>
+                <label for="email">Usuário</label>
+                <input type="text" name="email" id="email" placeholder="nome@email.com">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                <div class="opcoes-senha">
+                    <label>
+                        <input type="checkbox" name="lembrar" id="lembrar"> Lembrar de mim
+                    </label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button type="button" id="entrar">Entrar</button>
+                <div class="cadastro-link">
+                    <p>Não tem uma conta ainda? <a href="#">Fazer cadastro</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
