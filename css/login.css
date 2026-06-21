@@ -21,6 +21,12 @@ body{
     border-radius: 60px 0px 60px 0px;
     overflow: hidden;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-out, box-shadow 1.0s ease-in;
+}
+
+.container:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .formulario{
@@ -57,6 +63,23 @@ input{
     background-color: #E6E6E6;
     padding: 12px;
     border-radius: 8px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]:hover, 
+input[type="password"]:hover {
+    background-color: #f1f1f1;
+    border-color: #6B8B3F;
+    box-shadow: 0px 0px 8px rgba(107, 139, 63, 0.25); 
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus {
+    background-color: #f1f1f1;
+    border-color: #6B8B3F;
+    box-shadow: 0px 0px 8px rgba(107, 139, 63, 0.25); 
 }
 
 button{
@@ -67,6 +90,15 @@ button{
     font-family: 'League Spartan', sans-serif;
     font-size: 17px;
     border-radius: 8px;
+    transition: background-color 0.5s ease, transform 0.1s ease;
+}
+
+button:hover{
+    background-color: #086C46;
+}
+
+button:active {
+    transform: scale(0.98);
 }
 
 .titulo{
