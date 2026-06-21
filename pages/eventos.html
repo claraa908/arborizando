@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../templates/navbar/navbar.css" type="text/css">
+    <link rel="stylesheet" href="../templates/carrossel/carrossel.css" type="text/css">
+    <link rel="stylesheet" href="../css/eventos.css" type="text/css">
+    <title>Eventos</title>
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+    <div id="carrossel-container-placeholder"></div>
+
+    <main class="main-container">
+        </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            //navbar
+            fetch('../templates/navbar/navbar.html')
+                .then(res => res.text())
+                .then(html => document.getElementById('navbar-container').innerHTML = html)
+                .catch(err => console.error('Erro ao carregar navbar:', err));
+
+            //carrossel
+            fetch('../templates/carrossel/carrossel.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('carrossel-container-placeholder').innerHTML = html;
+                    
+                    
+                    const script = document.createElement('script');
+                    script.src = "../templates/carrossel/carrossel.js";
+                    document.body.appendChild(script);
+                })
+                .catch(err => console.error('Erro ao carregar carrossel:', err));
+        });
+    </script>
+</body>
+
+</html>
