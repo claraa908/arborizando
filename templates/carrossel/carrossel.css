@@ -1,0 +1,73 @@
+.carrossel-container {
+    position: relative;
+    width: 100vw;
+    height: auto; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.carrossel-slide {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.carrossel-imagem {
+    width: 100%;
+    height: auto; 
+    object-fit: normal; 
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carrossel-imagem.active {
+    display: block;  
+    opacity: 1;
+    position: relative; 
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    background-color: rgba(235, 230, 230, 0.26);
+    color: #6B8B3F; 
+    border: none;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background-color 0.2s;
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.prev-btn { 
+    left: 30px; 
+}
+
+.next-btn { 
+    right: 30px; 
+}
+
+.indicator {
+    width: 60px; 
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
