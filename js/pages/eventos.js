@@ -21,3 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
     carregarTemplate("carrossel-container-placeholder", "../templates/carrossel/carrossel.html");
     carregarTemplate("rodape-container", "../templates/rodape/rodape.html"); 
 });
+
+function abrirModal(idModal) {
+    const modal = document.getElementById(idModal);
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function fecharModal(idModal) {
+    const modal = document.getElementById(idModal);
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal-overlay')) {
+        event.target.style.display = 'none';
+    }
+}
