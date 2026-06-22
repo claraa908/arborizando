@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/navbar-func.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <script src="../js/pages/navbar-func.js" type="module"></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <aside class="navbar-lateral">
+        <nav>
+            <div class="cabecalho">
+                <div class="icone-menu" id="btn-menu">
+                    <img src="../../assets/icons/menu.png" alt="Menu">
+                </div>
+                <div class="logo">
+                    <img src="../../assets/icons/logo-db.png" class="logo-completa" alt="Logo do Arborizando">
+                    <img src="../../assets/icons/logo-reduzida.png" class="logo-reduzida" alt="Logo do Arborizando">
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/adm.png">
+                        <span class="texto-link">Administração</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/voluntario.png">
+                        <span class="texto-link">Voluntários</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="btn-evento" style="cursor: pointer;">
+                        <img src="../../assets/icons/eventos.png">
+                        <span class="texto-link">Eventos</span>
+                        <img src="../assets/icons/ver-mais.png" class="seta-submenu">
+                    </a>
+                    <ul class="submenu" id="submenu-evento">
+                        <li>
+                            <a href="#">
+                                <span class="texto-link">Cadastrar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="texto-link">Eventos cadastrados</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/licitacao.png">
+                        <span class="texto-link">Licitações</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/mapeamento.png">
+                        <span class="texto-link">Mapeamento</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="conteudo-principal">
+        <header class="topbar">
+            <div class="perfil">
+                <img src="../assets/imagens/foto-romenia.png" alt="Foto de perfil" class="Foto de perfil">
+                <div class="info-perfil">
+                    <span class="nome">Romênia Barros</span>
+                    <span class="cargo">Superintedente da AMMA</span>
+                </div>
+            </div>
+            <div class="acoes">
+                <div class="container-config" id="btn-config" style="cursor: pointer;">
+                    <img src="../assets/icons/configuracao.png" alt="Configurações" class="icone-acao">
+
+                    <div class="menu-config" id="dropdown-config">
+                        <a href="#">Configurações</a>
+                        <hr><a href="#">Sair</a>
+                    </div>
+                </div>
+                <img src="../assets/icons/notificacao.png" alt="Notificações" class="icone-acao">
+            </div>
+        </header>
+        <main>
+        </main>
+    </div>
+</body>
+</html>

@@ -71,21 +71,21 @@ input{
 input[type="text"]:hover, 
 input[type="password"]:hover {
     background-color: #f1f1f1;
-    border-color: #18885d;
+    border-color: #4D701C;
     box-shadow: 0px 0px 8px rgba(107, 139, 63, 0.25); 
 }
 
 input[type="text"]:focus, 
 input[type="password"]:focus {
     background-color: #f1f1f1;
-    border-color: #18885d;
+    border-color: #4D701C;
     box-shadow: 0px 0px 8px rgba(107, 139, 63, 0.25); 
 }
 
 button{
     border: none;
     padding: 12px;
-    background-color: #18885d;
+    background-color: #4D701C;
     color: #FFFFFF;
     font-family: 'League Spartan', sans-serif;
     font-size: 17px;
@@ -94,7 +94,7 @@ button{
 }
 
 button:hover{
-    background-color: #21593c;
+    background-color: #1E300B;
 }
 
 button:active {
