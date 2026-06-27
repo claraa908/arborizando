@@ -1,0 +1,298 @@
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo-pagina {
+    font-size: 2.5rem;
+    color: #293a1c;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.linha-titulo {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 30px;
+}
+
+.lista-eventos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card-evento {
+    display: flex;
+    background-color: #6b8e4e; 
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.evento-imagem-box {
+    width: 30%;
+    min-width: 250px;
+}
+
+.evento-imagem-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+
+.evento-conteudo {
+    width: 70%;
+    padding: 20px 25px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.evento-conteudo h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.evento-conteudo p {
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.evento-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 15px;
+}
+
+.evento-data {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.btn-mais-info {
+    background-color: #3b5229;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-mais-info:hover {
+    background-color: #000000d3;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 40px;
+}
+
+.pag-nav, .pag-num {
+    background-color: #6b8e4e;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.pag-nav:hover, .pag-num:hover {
+    background-color: #4d5e4a;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-container {
+    background-color: #d9d9d9; 
+    width: 90%;
+    max-width: 600px;
+    border-radius: 30px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.modal-titulo {
+    font-size: 1.5rem;
+    color: #2e4d1e;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.linha-modal {
+    border: none;
+    height: 1px;
+    background-color: #999;
+    margin-bottom: 20px;
+}
+
+.modal-bloco {
+    background-color: #6b8e4e; 
+    color: white;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.modal-bloco h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+}
+
+.modal-grid-dois {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.modal-card-usuario {
+    background-color: #fff;
+    width: 90%;
+    max-width: 750px;
+    border-radius: 30px 30px 30px 0px; 
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    animation: abrirSuave 0.3s ease;
+}
+
+abrirSuave {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-usuario-header {
+    background-size: cover;
+    background-position: center;
+    padding: 40px 30px 25px 30px;
+    color: white;
+    position: relative;
+}
+
+.modal-usuario-header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    max-width: 90%;
+}
+
+.modal-usuario-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+}
+
+.modal-usuario-fechar:hover {
+    transform: scale(1.1);
+}
+
+.modal-usuario-body {
+    padding: 25px 30px;
+    background-color: #ffffff;
+}
+
+.modal-usuario-descricao {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.modal-usuario-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.info-box-verde {
+    background-color: #6b8e4e; 
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.info-box-header i {
+    font-size: 1.1rem;
+}
+
+.info-box-verde p {
+    margin: 4px 0;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}

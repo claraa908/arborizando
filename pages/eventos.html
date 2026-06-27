@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../templates/navbar/navbar.css" type="text/css">
+    <link rel="stylesheet" href="../templates/carrossel/carrossel.css" type="text/css">
+    <link rel="stylesheet" href="../templates/rodape/rodape.css" type="text/css">
+    <link rel="stylesheet" href="../css/eventos.css" type="text/css">
+    <title>Eventos</title>
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+    <div id="carrossel-container-placeholder"></div>
+
+    <main class="main-container">
+        <h1 class="titulo-pagina">Eventos</h1>
+        <hr class="linha-titulo">
+
+        <section class="lista-eventos">
+            <div class="card-evento">
+                <div class="evento-imagem-box">
+                    <img src="../assets/imagens/cedro.png" alt="Caminhada até o Cedro">
+                </div>
+                <div class="evento-conteudo">
+                    <h2>Caminhada até o Cedro para boas vivências com a natureza</h2>
+                    <p>Venha respirar ar puro, se conectar com a biodiversidade local e contemplar um verdadeiro patrimônio nacional! Nossa caminhada ecológica até o imponente Açude do Cedro propõe uma imersão na história e na arquitetura do século XIX. Vamos apreciar de perto a engenharia desse monumento histórico esculpido entre os monólitos, compreendendo sua relevância cultural para Quixadá e debatendo a importância da preservação das nossas riquezas ambientais e históricas.</p>
+                    <div class="evento-footer">
+                        <span class="evento-data"><strong>Domingo, 29 de setembro, 2026 | 17:00</strong></span>
+                        <button class="btn-mais-info" onclick="abrirModal('modal-cedro')">Mais informações</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-evento">
+                <div class="evento-imagem-box">
+                    <img src="../assets/imagens/arvores.png" alt="Conversa sobre árvores">
+                </div>
+                <div class="evento-conteudo">
+                    <h2>Conversa sobre como cuidar das árvores de seu bairro</h2>
+                    <p>Venha discutir estratégias para o cuidado e manutenção das árvores em nossa comunidade! Esta conversa visa promover a conscientização sobre a importância das árvores na vida urbana, compartilhando conhecimentos sobre técnicas de plantio, poda e proteção contra pragas e doenças.</p>
+                    <div class="evento-footer">
+                        <span class="evento-data"><strong>Sábado, 05 de outubro, 2026 | 10:00</strong></span>
+                        <button class="btn-mais-info" onclick="abrirModal('modal-arvores')">Mais informações</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-evento">
+                <div class="evento-imagem-box">
+                    <img src="../assets/imagens/pordosol.jpg" alt="Pôr do sol">
+                </div>
+                <div class="evento-conteudo">
+                    <h2>Encontro para observar o pôr do sol em um ambiente com árvores</h2>
+                    <p>O pôr do sol de Quixadá visto de um jeito special. Convidamos toda a comunidade para uma tarde de contemplação na Lagoa dos Monólitos. Em meio à sombra das árvores, teremos um momento leve com dinâmicas de conexão com a terra, reflexões sobre o impacto do verde na nossa saúde mental e, claro, o espetáculo do entardecer.</p>
+                    <div class="evento-footer">
+                        <span class="evento-data"><strong>Sábado, 12 de outubro, 2026 | 17:30</strong></span>
+                        <button class="btn-mais-info" onclick="abrirModal('modal-pordosol')">Mais informações</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-evento">
+                <div class="evento-imagem-box">
+                    <img src="../assets/imagens/plantacao.jpg" alt="Plantação de mudas">
+                </div>
+                <div class="evento-conteudo">
+                    <h2>Campanha de plantação de novas mudas de árvores no centro de Quixadá</h2>
+                    <p>Junte-se a nós nesta grande ação coletiva de plantio na Praça do Leão. Vamos arborizar o centro urbano com mudas nativas, garantindo mais sombra, conforto térmico e vida para o nosso dia a dia. Traga sua disposição e ajude a plantar o futuro de Quixadá!</p>
+                    <div class="evento-footer">
+                        <span class="evento-data"><strong>Sábado, 18 de outubro, 2026 | 15:00</strong></span>
+                        <button class="btn-mais-info" onclick="abrirModal('modal-plantacao')">Mais informações</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="paginacao">
+            <button class="pag-nav">&lt; Anterior</button>
+            <button class="pag-num ativo">01</button>
+            <button class="pag-num">02</button>
+            <button class="pag-num">03</button>
+            <button class="pag-num">04</button>
+            <button class="pag-num">05</button>
+            <button class="pag-nav">Próximo &gt;</button>
+        </div>
+    </main>
+
+    <div id="modal-cedro" class="modal-overlay">
+        <div class="modal-card-usuario">
+            <div class="modal-usuario-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../assets/imagens/cedro.png');">
+                <button class="modal-usuario-fechar" onclick="fecharModal('modal-cedro')">&times;</button>
+                <h2>Caminhada até o Cedro para boas vivências com a natureza</h2>
+            </div>
+            <div class="modal-usuario-body">
+                <p class="modal-usuario-descricao">
+                    <strong>Venha respirar ar puro, se conectar com a biodiversidade local e contemplar um verdadeiro patrimônio nacional! Nossa caminhada ecológica até o imponente Açude do Cedro propõe uma imersão na história e na arquitetura do século XIX. Vamos apreciar de perto a engenharia desse monumento histórico esculpido entre os monólitos, compreendendo sua relevância cultural para Quixadá e debatendo a importância da preservação das nossas riquezas ambientais e históricas.</strong>
+                </p>
+                <div class="modal-usuario-grid">
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Ponto de encontro:</span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p><small>UFC Quixadá<br>Av. José de Freitas Queiroz, 5003 - Cedro Novo 63900-000</small></p>
+                        <p><strong>Destino:</strong><br><small>Açude do Cedro<br>Estr. p/ Açude do Cedro - Quixadá, CE, 63900-000</small></p>
+                    </div>
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Horários:</span>
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <p><small>17:00 (Saída da UFC até o Cedro)<br>até<br>18:30 (Saída do Cedro até a UFC)</small></p>
+                        <p><strong>Data:</strong><br><small>Domingo, 27 de setembro, 2026</small></p>
+                    </div>
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Recomendações:</span>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p><strong>Não esqueça:</strong><br><small>Sua garrafa d'água<br>Seu repelente</small></p>
+                        <p><strong>Use:</strong><br><small>Roupas leves<br>Tênis adequado para caminhada</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-arvores" class="modal-overlay">
+        <div class="modal-card-usuario">
+            <div class="modal-usuario-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../assets/imagens/arvores.png');">
+                <button class="modal-usuario-fechar" onclick="fecharModal('modal-arvores')">&times;</button>
+                <h2>Conversa sobre como cuidar das árvores de seu bairro</h2>
+            </div>
+            <div class="modal-usuario-body">
+                <p class="modal-usuario-descricao">
+                   <strong>Venha discutir estratégias para o cuidado e manutenção das árvores em nossa comunidade! Esta conversa visa promover a conscientização sobre a importância das árvores na vida urbana, compartilhando conhecimentos sobre técnicas de plantio, poda e proteção contra pragas e doenças.</strong>
+                </p>
+                <div class="modal-usuario-grid">
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Local de encontro:</span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p><small>UniCatólica<br>R. Juvêncio Alves, 660 - Centro, Quixadá - CE, 63900-257</small></p>
+                        <p><strong>Sala:</strong><br><small>Auditório</small></p>
+                    </div>
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Horários:</span>
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <p><small>10:00 (Começo do evento)<br>até<br>12:00 (Fim do evento)</small></p>
+                        <p><strong>Data:</strong><br><small>Sábado, 03 de outubro, 2026</small></p>
+                    </div>
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Recomendações:</span>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p><strong>Não esqueça:</strong><br><small>Sua garrafa d'água</small></p>
+                        <p><strong>Use:</strong><br><small>Roupas leves (de preferência calça)</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-pordosol" class="modal-overlay">
+        <div class="modal-card-usuario">
+            <div class="modal-usuario-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../assets/imagens/pordosol.jpg');">
+                <button class="modal-usuario-fechar" onclick="fecharModal('modal-pordosol')">&times;</button>
+                <h2>Encontro para observar o pôr do sol em um ambiente com árvores</h2>
+            </div>
+            <div class="modal-usuario-body">
+                <p class="modal-usuario-descricao">
+                    <strong>O pôr do sol de Quixadá visto de um jeito especial. Convidamos toda a comunidade para uma tarde de contemplação na Lagoa dos Monólitos. Em meio à sombra das árvores, teremos um momento leve com dinâmicas de conexão com a terra, reflexões sobre o impacto do verde na nossa saúde mental e, claro, o espetáculo do entardecer.</strong>
+                </p>
+                <div class="modal-usuario-grid">
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Local de encontro:</span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p><small>Lagoa dos Monólitos<br>Campo Velho, Quixadá-CE, 63900-000</small></p>
+                    </div>
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Horários:</span>
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <p><small>17:30 (Começo do pôr do sol)<br>até<br>18:30 (Fim do pôr do sol)</small></p>
+                        <p><strong>Data:</strong><br><small>Sábado, 10 de outubro, 2026</small></p>
+                    </div>
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Recomendações:</span>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p><strong>Não esqueça:</strong><br><small>Sua garrafa d'água<br>Seu repelente</small></p>
+                        <p><strong>Use:</strong><br><small>Roupas leves<br>Calçados adequados</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-plantacao" class="modal-overlay">
+        <div class="modal-card-usuario">
+            <div class="modal-usuario-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../assets/imagens/plantacao.jpg');">
+                <button class="modal-usuario-fechar" onclick="fecharModal('modal-plantacao')">&times;</button>
+                <h2>Campanha de plantação de novas mudas no centro de Quixadá</h2>
+            </div>
+            <div class="modal-usuario-body">
+                <p class="modal-usuario-descricao">
+                   <strong> Junte-se a nós nesta grande ação coletiva de plantio na Praça do Leão. Vamos arborizar o centro urbano com mudas nativas, garantindo mais sombra, conforto térmico e vida para o nosso dia a dia. Traga sua disposição e ajude a plantar o futuro de Quixadá!</strong>
+                </p>
+                <div class="modal-usuario-grid">
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Local de encontro:</span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p><small>Praça do Leão - José de Barros<br>Av. Plácido Castelo, 1969-2031 - Centro - Quixadá-CE, 63900-000</small></p>
+                    </div>
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Horários:</span>
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <p><small>15:00 (Começo do evento)<br>até<br>18:00 (Fim do evento)</small></p>
+                        <p><strong>Data:</strong><br><small>Sexta, 16 de outubro, 2026</small></p>
+                    </div>
+                    <div class="info-box-verde">
+                        <div class="info-box-header">
+                            <span>Recomendações:</span>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p><strong>Não esqueça:</strong><br><small>Sua garrafa d'água</small></p>
+                        <p><strong>Use:</strong><br><small>Roupas confortáveis</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="rodape-container"></div>
+    <script src="../js/pages/eventos.js"></script>
+</body>
+</html>
