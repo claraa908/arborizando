@@ -1,0 +1,97 @@
+.eventos{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 450px));
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.evento{
+    background-color: #6B8B3F;
+    color: #e6e6ee;
+    padding: 25px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.evento img{
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.evento .titulo{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.evento .desc{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.evento .mais{
+    background-color: #4D701C;
+    color: #e6e6ee;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 0 20px 0 20px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+
+    align-self: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.evento .mais:hover{
+    background-color: #35471d;
+    transform: scale(1.05);
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center; /* Centraliza a barra inteira na tela */
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 50px; /* Dá um respiro legal do fim da tela */
+}
+
+.btn-pag {
+    background-color: #6B8B3F;
+    color: #FFFFFF;
+    border: none;
+    border-right: 1px solid #FFFFFF;
+    padding: 8px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-pag:last-child {
+    border-right: none;
+}
+
+.btn-pag.anterior {
+    border-radius: 0 0 0 16px;
+    padding-left: 25px;
+}
+
+.btn-pag.proximo {
+    border-radius: 0 16px 0 0;
+    padding-right: 25px;
+}
+
+.btn-pag.ativo {
+    background-color: #1A2411;
+    font-weight: bold;
+}
+
+.btn-pag:hover:not(.ativo) {
+    background-color: #4A6329;
+}

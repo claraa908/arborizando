@@ -50,7 +50,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="../pages/eventos-func.html">
                                 <span class="texto-link">Eventos cadastrados</span>
                             </a>
                         </li>
@@ -86,7 +86,7 @@
 
                     <div class="menu-config" id="dropdown-config">
                         <a href="#">Configurações</a>
-                        <hr><a href="#">Sair</a>
+                        <hr><a id="btn-sair">Sair</a>
                     </div>
                 </div>
                 <img src="../assets/icons/notificacao.png" alt="Notificações" class="icone-acao">
@@ -172,8 +172,8 @@
 
                     <div class="grupo-input">
                         <label for="rec">Recomendações (opcional)</label>
-                        <input type="text" name="rec1" value="Não esqueça: " oninput="textoFixo(this)">
-                        <input type="text" name="rec1" value="Use: " oninput="textoFixo(this)" style="margin-top: 10px;">
+                        <input type="text" name="rec1" value="Não esqueça: " oninput="textoFixo(this, 'Não esqueça: ')">
+                        <input type="text" name="rec2" value="Use: " oninput="textoFixo(this, 'Use: ')">
                     </div>
 
                     <div class="area-botao">
@@ -183,5 +183,24 @@
             </div>
         </main>
     </div>
+    
+    <script>
+    const fileInput = document.getElementById('file-upload');
+    const areaTexto = document.querySelector('.area-drag-drop span');
+
+    if(fileInput && areaTexto) {
+        fileInput.addEventListener('change', function() {
+            if (this.files && this.files.length > 0) {
+                areaTexto.textContent = "Imagem selecionada: " + this.files[0].name;
+                areaTexto.style.color = "#1E300B";
+                areaTexto.style.fontWeight = "bold";
+            } else {
+                areaTexto.textContent = "Arraste a imagem até aqui";
+                areaTexto.style.color = "inherit";
+                areaTexto.style.fontWeight = "normal";
+            }
+        });
+    }
+</script>
 </body>
 </html>

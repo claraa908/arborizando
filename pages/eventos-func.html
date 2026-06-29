@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/navbar-func.css">
+    <link rel="stylesheet" href="../css/eventos-func.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <script src="../js/pages/navbar-func.js" type="module"></script>
+    <script src="../js/pages/eventos-func.js" type="module"></script>
+    <title>Arborizando - Eventos cadastrados</title>
+</head>
+<body>
+    <aside class="navbar-lateral">
+        <nav>
+            <div class="cabecalho">
+                <div class="icone-menu" id="btn-menu">
+                    <img src="../../assets/icons/menu.png" alt="Menu">
+                </div>
+                <div class="logo">
+                    <img src="../../assets/icons/logo-db.png" class="logo-completa" alt="Logo do Arborizando">
+                    <img src="../../assets/icons/logo-reduzida.png" class="logo-reduzida" alt="Logo do Arborizando">
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/adm.png">
+                        <span class="texto-link">Administração</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/voluntario.png">
+                        <span class="texto-link">Voluntários</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="btn-evento" style="cursor: pointer;">
+                        <img src="../../assets/icons/eventos.png">
+                        <span class="texto-link">Eventos</span>
+                        <img src="../assets/icons/ver-mais.png" class="seta-submenu">
+                    </a>
+                    <ul class="submenu" id="submenu-evento">
+                        <li>
+                            <a href="../pages/cad-eventos.html">
+                                <span class="texto-link">Cadastrar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../pages/eventos-func.html">
+                                <span class="texto-link">Eventos cadastrados</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/licitacao.png">
+                        <span class="texto-link">Licitações</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/mapeamento.png">
+                        <span class="texto-link">Mapeamento</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="conteudo-principal">
+        <header class="topbar">
+            <div class="perfil">
+                <img src="../assets/imagens/foto-romenia.png" alt="Foto de perfil" class="Foto de perfil">
+                <div class="info-perfil">
+                    <span class="nome">Romênia Barros</span>
+                    <span class="cargo">Superintedente da AMMA</span>
+                </div>
+            </div>
+            <div class="acoes">
+                <div class="container-config" id="btn-config" style="cursor: pointer;">
+                    <img src="../assets/icons/configuracao.png" alt="Configurações" class="icone-acao">
+
+                    <div class="menu-config" id="dropdown-config">
+                        <a href="#">Configurações</a>
+                        <hr><a href="#">Sair</a>
+                    </div>
+                </div>
+                <img src="../assets/icons/notificacao.png" alt="Notificações" class="icone-acao">
+            </div>
+        </header>
+        <main>
+            <div class="eventos">
+                <div class="evento">
+                    <img src="../assets/imagens/1-evento-func.png">
+                    <span class="titulo">Caminhada até o Cedro para boas vivên-cias com a natureza</span>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur. Ullamcorper in pulvinar tempor molestie pellentesque porttitor. 
+                        Sagittis enim morbi lacinia arcu tempor massa. Arcu volutpat quam lectus lacus. Morbi id neque felis vel. 
+                        Vitae tortor mi pulvinar in diam donec a volutpat.
+                    </p>
+                    <button class="mais">mais</button>
+                </div>
+                <div class="evento">
+                    <img src="../assets/imagens/2-evento-func.png">
+                    <span class="titulo">Caminhada até o Cedro para boas vivên-cias com a natureza</span>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur. Ullamcorper in pulvinar tempor molestie pellentesque porttitor. 
+                        Sagittis enim morbi lacinia arcu tempor massa. Arcu volutpat quam lectus lacus. Morbi id neque felis vel. 
+                        Vitae tortor mi pulvinar in diam donec a volutpat.
+                    </p>
+                    <button class="mais">mais</button>
+                </div>
+                <div class="evento">
+                    <img src="../assets/imagens/3-evento-func.png">
+                    <span class="titulo">Caminhada até o Cedro para boas vivên-cias com a natureza</span>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur. Ullamcorper in pulvinar tempor molestie pellentesque porttitor. 
+                        Sagittis enim morbi lacinia arcu tempor massa. Arcu volutpat quam lectus lacus. Morbi id neque felis vel. 
+                        Vitae tortor mi pulvinar in diam donec a volutpat.
+                    </p>
+                    <button class="mais">mais</button>
+                </div>
+                <div class="evento">
+                    <img src="../assets/imagens/4-evento-func.png">
+                    <span class="titulo">Caminhada até o Cedro para boas vivên-cias com a natureza</span>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur. Ullamcorper in pulvinar tempor molestie pellentesque porttitor. 
+                        Sagittis enim morbi lacinia arcu tempor massa. Arcu volutpat quam lectus lacus. Morbi id neque felis vel. 
+                        Vitae tortor mi pulvinar in diam donec a volutpat.
+                    </p>
+                    <button class="mais">mais</button>
+                </div>
+            </div>
+            <div class="paginacao">
+                <button class="btn-pag anterior">&lt; Anterior</button>
+                <button class="btn-pag ativo">01</button>
+                <button class="btn-pag">02</button>
+                <button class="btn-pag">03</button>
+                <button class="btn-pag">04</button>
+                <button class="btn-pag">05</button>
+                <button class="btn-pag proximo">Próximo &gt;</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

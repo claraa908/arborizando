@@ -19,6 +19,7 @@ body{
 
     position: sticky;
     top: min(0px, calc(100vh - 100%));
+    flex-shrink: 0;
 
     overflow-x: hidden;
     transition: width 0.5s ease-in-out;
@@ -182,6 +183,7 @@ nav a img{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 0;
 }
 
 .topbar{
