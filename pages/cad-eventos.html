@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/navbar-func.css">
+    <link rel="stylesheet" href="../css/cad-eventos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <script src="../js/pages/navbar-func.js" type="module"></script>
+    <script src="../js/pages/cad-eventos.js" type="module"></script>
+    <title>Arborize - Cadastro de Eventos</title>
+</head>
+<body>
+    <aside class="navbar-lateral">
+        <nav>
+            <div class="cabecalho">
+                <div class="icone-menu" id="btn-menu">
+                    <img src="../../assets/icons/menu.png" alt="Menu">
+                </div>
+                <div class="logo">
+                    <img src="../../assets/icons/logo-db.png" class="logo-completa" alt="Logo do Arborizando">
+                    <img src="../../assets/icons/logo-reduzida.png" class="logo-reduzida" alt="Logo do Arborizando">
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/adm.png">
+                        <span class="texto-link">Administração</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/voluntario.png">
+                        <span class="texto-link">Voluntários</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="btn-evento" style="cursor: pointer;">
+                        <img src="../../assets/icons/eventos.png">
+                        <span class="texto-link">Eventos</span>
+                        <img src="../assets/icons/ver-mais.png" class="seta-submenu">
+                    </a>
+                    <ul class="submenu" id="submenu-evento">
+                        <li>
+                            <a href="cad-eventos.html">
+                                <span class="texto-link">Cadastrar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../pages/eventos-func.html">
+                                <span class="texto-link">Eventos cadastrados</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/licitacao.png">
+                        <span class="texto-link">Licitações</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../assets/icons/mapeamento.png">
+                        <span class="texto-link">Mapeamento</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="conteudo-principal">
+        <header class="topbar">
+            <div class="perfil">
+                <img src="../assets/imagens/foto-romenia.png" alt="Foto de perfil" class="Foto de perfil">
+                <div class="info-perfil">
+                    <span class="nome">Romênia Barros</span>
+                    <span class="cargo">Superintedente da AMMA</span>
+                </div>
+            </div>
+            <div class="acoes">
+                <div class="container-config" id="btn-config" style="cursor: pointer;">
+                    <img src="../assets/icons/configuracao.png" alt="Configurações" class="icone-acao">
+
+                    <div class="menu-config" id="dropdown-config">
+                        <a href="#">Configurações</a>
+                        <hr><a id="btn-sair">Sair</a>
+                    </div>
+                </div>
+                <img src="../assets/icons/notificacao.png" alt="Notificações" class="icone-acao">
+            </div>
+        </header>
+
+
+        <main class="formulario">
+            <div class="head-form">
+                <span class="local-pag">eventos/<strong>cadastrar</strong></span>
+                <h4 class="titulo-secao">Cadastrar Eventos</h4>
+                <hr class="linha-separadora">
+                <span class="obrigatorio">(*) indica campos obrigatórios</span>
+            </div>
+
+            <div class="form">
+                <form class="form-cadastro">
+                    <div class="grupo-input">
+                        <label for="nome-evento">Nome do Evento *</label>
+                        <input type="text" id="nome-evento" name="nome-evento" placeholder="ex.: Caminhada ao Cedro" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="desc-evento">Descrição do Evento *</label>
+                        <textarea name="desc-evento" id="desc-evento" rows="4" required placeholder="Digite a descrição aqui..."></textarea>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="grupo-input upload-box">
+                            <label>Adicionar imagem *</label>
+                            <div class="area-drag-drop">
+                                <span>Arraste a imagem até aqui</span>
+                                <label for="file-upload" class="btn-upload">upload</label>
+                                <input type="file" id="file-upload" accept="image/*" hidden required>
+                            </div>
+                        </div>
+                        <div class="coluna-interna">
+                            <div class="grupo-input">
+                                <label for="data-inicio">Data de início *</label>
+                                <input type="date" id="data-inicio" name="data-inicio" required>
+                            </div>
+                            <div class="grupo-input">
+                                <label for="data-fim">Data de término *</label>
+                                <input type="date" id="data-fim" name="data-fim" required>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <h4 class="titulo-secao-2">Detalhes do Evento</h4>
+                    <hr class="linha-separadora">
+
+                    <div class="grupo-input">
+                        <label for="local">Defina o local *</label>
+                        <input type="text" id="local" name="local" required>
+                    </div>
+                    
+                    <div class="grupo-input">
+                        <label for="destino">Defina o destino (opcional)</label>
+                        <input type="text" id="destino" name="destino">
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="grupo-input">
+                            <label for="hora-inicio">Horário de início *</label>
+                            <input type="time" id="hora-inicio" name="hora-inicio" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label for="desc-hora-inicio">Descrição do horário de início *</label>
+                            <input type="text" id="desc-hora-inicio" name="desc-hora-inicio" required>
+                        </div>
+                    </div>
+                    
+                    <div class="linha-form">
+                        <div class="grupo-input">
+                            <label for="hora-fim">Horário de término *</label>
+                            <input type="time" id="hora-fim" name="hora-fim" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label for="desc-hora-fim">Descrição do horário de término *</label>
+                            <input type="text" id="desc-hora-fim" name="desc-hora-fim" required>
+                        </div>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="rec">Recomendações (opcional)</label>
+                        <input type="text" name="rec1" value="Não esqueça: " oninput="textoFixo(this, 'Não esqueça: ')">
+                        <input type="text" name="rec2" value="Use: " oninput="textoFixo(this, 'Use: ')">
+                    </div>
+
+                    <div class="area-botao">
+                        <button type="submit" class="btn-enviar">ENVIAR</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+    const fileInput = document.getElementById('file-upload');
+    const areaTexto = document.querySelector('.area-drag-drop span');
+
+    if(fileInput && areaTexto) {
+        fileInput.addEventListener('change', function() {
+            if (this.files && this.files.length > 0) {
+                areaTexto.textContent = "Imagem selecionada: " + this.files[0].name;
+                areaTexto.style.color = "#1E300B";
+                areaTexto.style.fontWeight = "bold";
+            } else {
+                areaTexto.textContent = "Arraste a imagem até aqui";
+                areaTexto.style.color = "inherit";
+                areaTexto.style.fontWeight = "normal";
+            }
+        });
+    }
+</script>
+</body>
+</html>

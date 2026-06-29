@@ -4,6 +4,9 @@ import{ signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12
 const inputEmail = document.getElementById('email');
 const inputSenha = document.getElementById('senha');
 const btnEntrar = document.getElementById('entrar');
+const emailsPermitidos = [
+    "claracruz.alves908@gmail.com"
+]
 
 async function fazerLogin(event) {
     event.preventDefault();
@@ -20,8 +23,14 @@ async function fazerLogin(event) {
         const cred = await signInWithEmailAndPassword(auth, email, senha);
         const usuarioLogado = cred.user;
         console.log(`Login feito com sucesso! Dados do usuário:${usuarioLogado}`);
-        window.location.href = "../index.html";
         alert(`Bem-vindo(a)!`);
+        
+        if(emailsPermitidos.includes(usuarioLogado.email)){
+            window.location.href = "../pages/cad-eventos.html"
+        }else{
+            window.location.href = "../pages/login.html"
+        }
+        
     } catch (error) {
         console.error(`Código do erro: ${error.code}`);
 
