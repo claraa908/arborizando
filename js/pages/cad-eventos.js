@@ -22,7 +22,7 @@ onAuthStateChanged(auth, (user) => {
         } else {
             sessionStorage.removeItem('saindo_voluntariamente');
         }
-        window.location.href = "../pages/login.html";
+        window.location.href = "../index.html";
     }
 });
 
@@ -32,8 +32,8 @@ if(btnSair){
 
         sessionStorage.setItem('saindo_voluntariamente', 'true');
         signOut(auth).then(() => {
-            console.log("Usuário deslogado com sucesso!");
-            window.location.href = "../pages/login.html";
+            alert("Usuário deslogado com sucesso!");
+            window.location.href = "../index.html";
         }).catch((error) => {
             console.error("Erro ao deslogar:", error);
             alert("Ocorreu um erro ao sair.");

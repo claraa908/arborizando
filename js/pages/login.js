@@ -28,7 +28,7 @@ async function fazerLogin(event) {
         if(emailsPermitidos.includes(usuarioLogado.email)){
             window.location.href = "../pages/cad-eventos.html"
         }else{
-            window.location.href = "../pages/login.html"
+            window.location.href = "../index.html"
         }
         
     } catch (error) {
