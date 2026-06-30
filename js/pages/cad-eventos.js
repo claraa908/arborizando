@@ -4,7 +4,7 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/12.15.0/f
 import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-storage.js";
 
 const emailsPermitidos = [
-    "claracruz.alves908@gmail.com"
+    "adm@gmail.com"
 ]
 const btnSair = document.getElementById("btn-sair");
 

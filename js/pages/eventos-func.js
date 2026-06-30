@@ -2,8 +2,9 @@ import { auth } from "../config/firebase.js";
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 const emailsPermitidos = [
-    "claracruz.alves908@gmail.com"
+    "adm@gmail.com"
 ]
+
 const btnSair = document.getElementById("btn-sair");
 onAuthStateChanged(auth, (user) => {
     if(user){

@@ -5,7 +5,7 @@ const inputEmail = document.getElementById('email');
 const inputSenha = document.getElementById('senha');
 const btnEntrar = document.getElementById('entrar');
 const emailsPermitidos = [
-    "claracruz.alves908@gmail.com"
+    "adm@gmail.com"
 ]
 
 async function fazerLogin(event) {
