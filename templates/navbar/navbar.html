@@ -16,9 +16,9 @@
         </div>
 
         <nav class="navbar">
-            <a href="#">Início</a>
+            <a href="../../index.html">Início</a>
             <span class="divisor"></span>
-            <a href="#">Eventos</a>
+            <a href="../../pages/eventos.html">Eventos</a>
             <span class="divisor"></span>
             <a href="#">Arborização</a>
             <span class="divisor"></span>
@@ -33,12 +33,14 @@
         </nav>
 
         <div class="header-acoes">
-            <button class="botao login">Login</button>
+            <a href="../../pages/login.html" style="text-decoration: none; color: white;"><button class="botao login">Login</button></a>
             <button class="botao cadastro">Cadastro</button>
             <div class="container-pesquisa">
-                <img class="pesquisa" src="../../assets/imagens/search-icon.png">
+                <img class="pesquisa-img" src="../../assets/imagens/search-icon.png" alt="Ícone de pesquisa">
                 <div class="barra-pesquisa">
-                    <p>Digite sua pesquisa...</p>
+                    <form>
+                        <input name="pesquisa" type="search" placeholder="Digite sua pesquisa..." class="pesquisa">
+                    </form>
                     <span></span>
                 </div>
             </div>
